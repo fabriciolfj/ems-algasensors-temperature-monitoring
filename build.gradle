@@ -1,4 +1,5 @@
 plugins {
+	id 'idea'
 	id 'java'
 	id 'org.springframework.boot' version '3.5.0'
 	id 'io.spring.dependency-management' version '1.1.7'
@@ -12,6 +13,14 @@ java {
 		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
+
+idea {
+	module {
+		downloadJavadoc=true
+		downloadSources=true
+	}
+}
+
 
 configurations {
 	compileOnly {
