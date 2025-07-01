@@ -3,6 +3,11 @@ server:
 
 spring:
   application.name: temperature-monitoring
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
   datasource:
     username: sa
     url: jdbc:h2:mem:~/algasensors-temperature-monitoring-db;CASE_INSENSITIVE_IDENTIFIERS=TRUE;
