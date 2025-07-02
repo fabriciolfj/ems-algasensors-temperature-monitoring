@@ -12,7 +12,7 @@ public class TSIDJacksonConfig {
     @Bean
     public Module tsidModule() {
         SimpleModule module = new SimpleModule();
-        module.addDeserializer(TSID.class, new TSIDToStringSerializer());
+        module.addDeserializer(TSID.class, new TSIDToStringDeserializer());
         return module;
     }
 
