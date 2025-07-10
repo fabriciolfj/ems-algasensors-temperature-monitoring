@@ -8,6 +8,15 @@ spring:
     port: 5672
     username: rabbitmq
     password: rabbitmq
+    listener:
+      simple:
+        prefetch: 4
+        retry:
+          enabled: true
+          initial-interval: 10s
+          max-interval: 30s
+          multiplier: 2
+          max-attempts: 3
   datasource:
     username: sa
     url: jdbc:h2:mem:~/algasensors-temperature-monitoring-db;CASE_INSENSITIVE_IDENTIFIERS=TRUE;
